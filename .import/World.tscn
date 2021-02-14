@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/ball_blue_small.png" type="Texture" id=1]
+[ext_resource path="res://OuterWalls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://.import/KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://Plate.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 15.2422
+
+[node name="World" type="Node2D"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 84.1097, 87.9395 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 84.3122, 88.872 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="OuterWalls" parent="." instance=ExtResource( 2 )]
+
+[node name="Plates" type="Node2D" parent="."]
+
+[node name="Plate" parent="Plates" instance=ExtResource( 5 )]
+position = Vector2( 223.468, 124.456 )
+
+[node name="Plate2" parent="Plates" instance=ExtResource( 5 )]
+position = Vector2( 231.842, 264.989 )
+rotation = 1.5708

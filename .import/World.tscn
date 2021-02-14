@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Electron.tscn" type="PackedScene" id=1]
 [ext_resource path="res://OuterWalls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BasicObstacle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Plate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://RotatingObstacle.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 
@@ -25,3 +27,27 @@ rotation = 1.5708
 
 [node name="Goal" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 270.548, 354.217 )
+
+[node name="Obstacles" type="Node2D" parent="YSort"]
+
+[node name="BasicObstacle" parent="YSort/Obstacles" instance=ExtResource( 4 )]
+position = Vector2( 266.134, 234.631 )
+
+[node name="BasicObstacle2" parent="YSort/Obstacles" instance=ExtResource( 4 )]
+position = Vector2( 414.627, 233.217 )
+
+[node name="BasicObstacle3" parent="YSort/Obstacles" instance=ExtResource( 4 )]
+position = Vector2( 264.72, 448.177 )
+
+[node name="BasicObstacle4" parent="YSort/Obstacles" instance=ExtResource( 4 )]
+position = Vector2( 417.455, 446.763 )
+
+[node name="BasicObstacle5" parent="YSort/Obstacles" instance=ExtResource( 4 )]
+position = Vector2( 171.519, 346.466 )
+rotation = -1.5708
+
+[node name="RotatingObstacle" parent="." instance=ExtResource( 6 )]
+position = Vector2( 789.109, 243.931 )
+
+[node name="RotatingObstacle2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 627.377, 431.825 )

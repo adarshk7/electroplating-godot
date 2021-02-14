@@ -9,6 +9,7 @@ radius = 15.2422
 [node name="Electron" type="KinematicBody2D" groups=[
 "electron",
 ]]
+z_index = 1
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

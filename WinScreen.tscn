@@ -13,3 +13,6 @@ margin_top = 65.1273
 margin_right = 279.893
 margin_bottom = 197.127
 text = "YOU WIN YAY!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}

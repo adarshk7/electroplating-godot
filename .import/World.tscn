@@ -7,15 +7,15 @@
 [node name="World" type="Node2D"]
 
 [node name="Electron" parent="." instance=ExtResource( 1 )]
-position = Vector2( 113.871, 89.8984 )
+position = Vector2( 102.76, 153.394 )
 
 [node name="OuterWalls" parent="." instance=ExtResource( 2 )]
 
 [node name="Plates" type="Node2D" parent="."]
 
 [node name="Plate" parent="Plates" instance=ExtResource( 5 )]
-position = Vector2( 223.468, 124.456 )
+position = Vector2( 990.183, 294.308 )
 
 [node name="Plate2" parent="Plates" instance=ExtResource( 5 )]
-position = Vector2( 231.842, 264.989 )
+position = Vector2( 512.812, 30.0539 )
 rotation = 1.5708

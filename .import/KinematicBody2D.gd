@@ -20,6 +20,9 @@ func _physics_process(delta):
 
 	for plate in get_tree().get_nodes_in_group('plates'):
 		if plate.activated:
-			velocity += plate.position - position
+			var attraction_direction = 1
+			if plate.polarity == plate.polarity_states.NEGATIVE:
+				attraction_direction = -1
+			velocity += (plate.position - position) * attraction_direction
 
 	velocity = move_and_slide(velocity.normalized() * speed)

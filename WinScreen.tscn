@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="WinScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 85.8925
+margin_top = 65.1273
+margin_right = 279.893
+margin_bottom = 197.127
+text = "YOU WIN YAY!!!"

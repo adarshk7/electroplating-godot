@@ -4,6 +4,7 @@
 extents = Vector2( 511.427, 5.04914 )
 
 [node name="Wall" type="StaticBody2D"]
+z_index = 4096
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 512.272, 3.52648 )

@@ -11,6 +11,7 @@ height = 97.7428
 [node name="Plate" type="StaticBody2D" groups=[
 "plates",
 ]]
+z_index = 4096
 input_pickable = true
 script = ExtResource( 2 )
 

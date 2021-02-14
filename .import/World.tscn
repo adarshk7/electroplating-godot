@@ -1,21 +1,27 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Electron.tscn" type="PackedScene" id=1]
 [ext_resource path="res://OuterWalls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Plate.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
-[node name="Electron" parent="." instance=ExtResource( 1 )]
-position = Vector2( 102.76, 153.394 )
+[node name="YSort" type="YSort" parent="."]
 
-[node name="OuterWalls" parent="." instance=ExtResource( 2 )]
+[node name="Electron" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 862.283, 85.3176 )
 
-[node name="Plates" type="Node2D" parent="."]
+[node name="OuterWalls" parent="YSort" instance=ExtResource( 2 )]
 
-[node name="Plate" parent="Plates" instance=ExtResource( 5 )]
+[node name="Plates" type="Node2D" parent="YSort"]
+
+[node name="Plate" parent="YSort/Plates" instance=ExtResource( 5 )]
 position = Vector2( 990.183, 294.308 )
 
-[node name="Plate2" parent="Plates" instance=ExtResource( 5 )]
+[node name="Plate2" parent="YSort/Plates" instance=ExtResource( 5 )]
 position = Vector2( 512.812, 30.0539 )
 rotation = 1.5708
+
+[node name="Goal" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 270.548, 354.217 )
